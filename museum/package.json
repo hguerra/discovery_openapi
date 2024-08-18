@@ -8,7 +8,7 @@
     "test": "redocly lint",
     "build:docs": "redocly build-docs -o dist/index.html",
     "generate:backend": "openapi-generator-cli generate -i dist/bundle.yaml -g go-server -o . -c openapiconfig-backend.yaml",
-    "generate:frontend": "openapi-generator-cli generate -i dist/bundle.yaml -g typescript-axios -o ./src/services -c openapiconfig-frontend.yaml --openapi-normalizer REFACTOR_ALLOF_WITH_PROPERTIES_ONLY=true"
+    "generate:frontend": "openapi-generator-cli generate -i dist/bundle.yaml -g typescript-axios -o ./web/src/infra/api/internal -c openapiconfig-frontend.yaml"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "2.13.4",

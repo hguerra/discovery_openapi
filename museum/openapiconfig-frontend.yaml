@@ -3,7 +3,7 @@
 axiosVersion: 1.7.4
 useSingleRequestParameter: true
 withoutPrefixEnums: true
-enumNameSuffix:
+enumNameSuffix: ""
 withSeparateModelsAndApi: true
 apiPackage: server
 modelPackage: model

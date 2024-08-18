@@ -1,9 +1,18 @@
-import type { Component } from 'solid-js';
+import { createResource, type Component } from 'solid-js';
 
 import logo from './logo.svg';
 import styles from './App.module.css';
 
+import { eventsApi } from './infra/api'
+
+const fetchEvents = async () => {
+  const res = await eventsApi.listSpecialEvents();
+  return res.data;
+}
+
 const App: Component = () => {
+  const [events] = createResource(fetchEvents);
+
   return (
     <div class={styles.App}>
       <header class={styles.header}>
