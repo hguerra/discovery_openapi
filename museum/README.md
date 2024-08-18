@@ -13,7 +13,7 @@ To see how to make this your own, look here:
 [README](https://openapi-generator.tech)
 
 - API version: 1.0.0
-- Build date: 2024-08-18T17:59:29.787966994-03:00[America/Sao_Paulo]
+- Build date: 2024-08-18T18:15:42.566586832-03:00[America/Sao_Paulo]
 - Generator version: 7.7.0
 For more information, please visit [https://redocly.com/docs/cli/](https://redocly.com/docs/cli/)
 

@@ -18,10 +18,10 @@ run:
 	go run cmd/museum/main.go
 
 build:
-	go build -o dist/museum cmd/museum/main.go
+	go build -o dist/api cmd/museum/main.go
 
 build-linux:
-	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -tags "netgo" -installsuffix netgo -o dist/museum cmd/museum/main.go
+	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -tags "netgo" -installsuffix netgo -o dist/api cmd/museum/main.go
 
 clean:
 	@rm -rf dist tmp

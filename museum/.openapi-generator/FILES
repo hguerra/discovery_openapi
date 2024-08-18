@@ -1,8 +1,5 @@
-.openapi-generator-ignore
-Dockerfile
 README.md
 api/openapi.yaml
-go.mod
 internal/infra/api/api.go
 internal/infra/api/api_events.go
 internal/infra/api/api_events_service.go
@@ -22,4 +19,3 @@ internal/infra/api/model_special_event_response.go
 internal/infra/api/model_ticket_type.go
 internal/infra/api/model_update_special_event_request.go
 internal/infra/api/routers.go
-main.go
