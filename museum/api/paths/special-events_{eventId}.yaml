@@ -5,7 +5,7 @@ get:
   tags:
     - Events
   parameters:
-    - $ref: ../components/parameters/EventId.yaml
+    - $ref: ../components/parameters/ParamEventId.yaml
   responses:
     '200':
       description: Success
@@ -27,7 +27,7 @@ patch:
   tags:
     - Events
   parameters:
-    - $ref: ../components/parameters/EventId.yaml
+    - $ref: ../components/parameters/ParamEventId.yaml
   requestBody:
     required: true
     content:
@@ -60,7 +60,7 @@ delete:
   tags:
     - Events
   parameters:
-    - $ref: ../components/parameters/EventId.yaml
+    - $ref: ../components/parameters/ParamEventId.yaml
   responses:
     '204':
       description: Success - no content
