@@ -1,0 +1,5 @@
+packageName: api
+packageVersion: 1.0.0
+router: chi
+serverPort: 8080
+sourceFolder: internal/infra/api

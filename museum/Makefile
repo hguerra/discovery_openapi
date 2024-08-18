@@ -7,7 +7,6 @@ FORCE: ;
 install:
 	npm install
 	go mod tidy
-	go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
 
 tidy:
 	go mod tidy
@@ -23,3 +22,6 @@ build:
 
 build-linux:
 	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -tags "netgo" -installsuffix netgo -o dist/museum cmd/museum/main.go
+
+clean:
+	@rm -rf dist tmp
