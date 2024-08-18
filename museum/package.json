@@ -7,7 +7,7 @@
     "build": "redocly bundle -o dist/bundle.yaml",
     "test": "redocly lint",
     "build:docs": "redocly build-docs -o dist/index.html",
-    "generate": "openapi-generator-cli generate -i dist/bundle.yaml -g go-server -o . -c openapiconfig.yaml"
+    "generate:backend": "openapi-generator-cli generate -i dist/bundle.yaml -g go-server -o . -c openapiconfig-backend.yaml"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "2.13.4",

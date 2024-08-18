@@ -15,6 +15,7 @@ import (
 	"context"
 	"net/http"
 	"errors"
+	 "github.com/google/uuid"
 )
 
 // EventsAPIService is a service that implements the logic for the EventsAPIServicer
@@ -88,7 +89,16 @@ func (s *EventsAPIService) ListSpecialEvents(ctx context.Context, startDate stri
 	// Add api_events_service.go to the .openapi-generator-ignore to avoid overwriting this service implementation when updating open api generation.
 
 	// TODO: Uncomment the next line to return response Response(200, []SpecialEventResponse{}) or use other options such as http.Ok ...
-	// return Response(200, []SpecialEventResponse{}), nil
+	return Response(200, []SpecialEventResponse{
+		{
+			EventId: uuid.New().String(),
+			Name: "Lorem",
+			Location: "Lorem",
+			EventDescription: "Lorem",
+			Dates: []string{"18/08/2024"},
+			Price: 9.99,
+		},
+	}), nil
 
 	// TODO: Uncomment the next line to return response Response(400, {}) or use other options such as http.Ok ...
 	// return Response(400, nil),nil
@@ -96,7 +106,7 @@ func (s *EventsAPIService) ListSpecialEvents(ctx context.Context, startDate stri
 	// TODO: Uncomment the next line to return response Response(404, {}) or use other options such as http.Ok ...
 	// return Response(404, nil),nil
 
-	return Response(http.StatusNotImplemented, nil), errors.New("ListSpecialEvents method not implemented")
+	// return Response(http.StatusNotImplemented, nil), errors.New("ListSpecialEvents method not implemented")
 }
 
 // UpdateSpecialEvent - Update special event
