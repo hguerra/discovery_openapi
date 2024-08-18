@@ -25,3 +25,5 @@
 Dockerfile
 main.go
 go.mod
+
+internal/infra/api/api_events_service.go

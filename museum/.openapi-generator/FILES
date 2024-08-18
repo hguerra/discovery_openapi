@@ -2,7 +2,6 @@ README.md
 api/openapi.yaml
 internal/infra/api/api.go
 internal/infra/api/api_events.go
-internal/infra/api/api_events_service.go
 internal/infra/api/api_operations.go
 internal/infra/api/api_operations_service.go
 internal/infra/api/api_tickets.go
