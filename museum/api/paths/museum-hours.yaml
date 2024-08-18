@@ -1,0 +1,40 @@
+get:
+  summary: Get museum hours
+  description: Get upcoming museum operating hours
+  operationId: getMuseumHours
+  tags:
+    - Operations
+  parameters:
+    - $ref: ../components/parameters/StartDate.yaml
+    - $ref: ../components/parameters/PaginationPage.yaml
+    - $ref: ../components/parameters/PaginationLimit.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GetMuseumHoursResponse.yaml
+          examples:
+            default:
+              summary: Museum opening hours
+              value:
+                - date: '2023-09-11'
+                  timeOpen: '09:00'
+                  timeClose: '18:00'
+                - date: '2023-09-12'
+                  timeOpen: '09:00'
+                  timeClose: '18:00'
+                - date: '2023-09-13'
+                  timeOpen: '09:00'
+                  timeClose: '18:00'
+                - date: '2023-09-17'
+                  timeOpen: '09:00'
+                  timeClose: '18:00'
+            closed:
+              summary: The museum is closed
+              value: []
+    '400':
+      description: Bad request
+    '404':
+      description: Not found

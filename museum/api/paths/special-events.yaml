@@ -1,0 +1,84 @@
+post:
+  security: []
+  operationId: CreateSpecialEvent
+  summary: Create special event
+  tags:
+    - Events
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CreateSpecialEventRequest.yaml
+        examples:
+          default_example:
+            $ref: ../components/examples/CreateSpecialEventRequestExample.yaml
+  responses:
+    '200':
+      description: success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/SpecialEventResponse.yaml
+          examples:
+            default_example:
+              $ref: ../components/examples/CreateSpecialEventResponseExample.yaml
+    '400':
+      description: Bad request
+    '404':
+      description: Not found
+get:
+  summary: List special events
+  description: Return a list of upcoming special events at the museum.
+  security: []
+  operationId: listSpecialEvents
+  tags:
+    - Events
+  parameters:
+    - name: startDate
+      in: query
+      description: >-
+        The starting date to retrieve future operating hours from. Defaults to
+        today's date.
+      schema:
+        type: string
+        format: date
+        example: '2023-02-23'
+    - name: endDate
+      in: query
+      description: >-
+        The end of a date range to retrieve special events for. Defaults to 7
+        days after `startDate`.
+      schema:
+        type: string
+        format: date
+        example: '2023-04-18'
+    - name: page
+      in: query
+      description: The page number to retrieve.
+      schema:
+        type: integer
+        default: 1
+        example: 2
+    - name: limit
+      in: query
+      description: The number of days per page.
+      schema:
+        type: integer
+        default: 10
+        maximum: 30
+        example: 15
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ListSpecialEventsResponse.yaml
+          examples:
+            default_example:
+              $ref: ../components/examples/ListSpecialEventsResponseExample.yaml
+    '400':
+      description: Bad request
+    '404':
+      description: Not found

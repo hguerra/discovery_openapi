@@ -1,0 +1,28 @@
+description: Request payload for creating new special events at the museum.
+properties:
+  name:
+    description: Name of the special event
+    type: string
+    example: Fossil lecture
+  location:
+    description: Location where the special event is held
+    type: string
+    example: Lecture theatre
+  eventDescription:
+    description: Description of the special event
+    type: string
+    example: >-
+      Our panel of experts will share their favorite fossils and explain why
+      they are so great.
+  dates:
+    description: List of planned dates for the special event
+    type: array
+    items:
+      type: string
+      format: date
+      example: '2024-03-29'
+  price:
+    description: Price of a ticket for the special event
+    type: number
+    format: float
+    example: 12.5
